@@ -11,7 +11,6 @@ from invoke.main import program
 from invoke.util import cd
 
 from pelican import main as pelican_main
-from pelican import run as pelican_run
 
 from pelican.server import ComplexHTTPRequestHandler, RootedHTTPServer
 from pelican.settings import DEFAULT_CONFIG, get_settings_from_file
@@ -33,9 +32,11 @@ CONFIG = {
     'port': 8000,
 }
 
-def build(c):
+def pelican_run(cmd):
+    cmd += ' ' + program.core.remainder  # allows to pass-through args to pelican
+    pelican_main(shlex.split(cmd))
+
+def build():
     pelican_run('-s {settings_base}'.format(**CONFIG))
 
-
-build(1)
-
+build()
