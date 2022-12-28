@@ -1,3 +1,4 @@
 invoke==1.7.3
+livereload==2.6.3
 Markdown==3.4.1
 pelican==4.8.0
