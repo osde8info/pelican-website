@@ -71,7 +71,9 @@ instance/
 # Sphinx documentation
 docs/_build/
 
-# PyBuilder
+# Builders
+output/
+public/
 target/
 
 # Jupyter Notebook
