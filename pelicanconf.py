@@ -34,6 +34,5 @@ DEFAULT_PAGINATION = 3
 # STATIC_SAVE_AS = '{path}'
 # STATIC_URL = '{path}'
 STATIC_PATHS = [
-    './icons',
-    './images'
+    'favicon.ico'
     ]
