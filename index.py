@@ -40,3 +40,4 @@ def build():
     pelican_run('-s {settings_base}'.format(**CONFIG))
 
 build()
+
